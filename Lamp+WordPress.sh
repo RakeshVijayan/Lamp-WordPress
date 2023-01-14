@@ -31,7 +31,7 @@ fi
 
 #Creating Random WP Database Credenitals
 
-db_name=wp$(echo $domTemp | sed 's/....$//')
+db_name=wp$(echo $domTemp | sed 's/....$//') #sed will trim the last part of the sitename
 
 db_user="$db_name`date +%s`" 
 
